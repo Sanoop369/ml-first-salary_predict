@@ -20,7 +20,7 @@ def mlr(request):
         age=int(request.POST["age"])
 
         w=data.predict([[area,bed,age]])
-        return render(request,'index.html',{'w':round(w[0])})
+        return render(request,'mlr.html',{'w':round(w[0])})
 
 
     return render(request,'mlr.html')
